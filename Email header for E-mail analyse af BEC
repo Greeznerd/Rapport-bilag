@@ -1,0 +1,168 @@
+Received: from DU2P194MB1517.EURP194.PROD.OUTLOOK.COM (2603:10a6:10:2b6::14)
+by AS8P194MB1237.EURP194.PROD.OUTLOOK.COM with HTTPS; Thu, 16 May 2024
+07:46:25 +0000
+Received: from DUZPR01CA0200.eurprd01.prod.exchangelabs.com
+(2603:10a6:10:4b6::10) by DU2P194MB1517.EURP194.PROD.OUTLOOK.COM
+(2603:10a6:10:2b6::14) with Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.27; Thu, 16 May
+2024 07:46:24 +0000
+Received: from DB5PEPF00014B93.eurprd02.prod.outlook.com
+(2603:10a6:10:4b6:cafe::b2) by DUZPR01CA0200.outlook.office365.com
+(2603:10a6:10:4b6::10) with Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.27 via Frontend
+Transport; Thu, 16 May 2024 07:46:24 +0000
+Received: from smtp-in12.electric.net (89.104.206.11) by
+DB5PEPF00014B93.mail.protection.outlook.com (10.167.8.231) with Microsoft
+SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+15.20.7587.21 via Frontend Transport; Thu, 16 May 2024 07:46:24 +0000
+Received: from 1s7Vol-0007hX-3s by in12b.electric.net with hostsite:2273617 (Exim 4.96.1)
+(envelope-from Clark.Kent@Firmanavn.com)
+id 1s7Vol-0007yC-5k
+for alberto@Firmanavn.com;
+Thu, 16 May 2024 00:46:23 -0700
+Received: by emcmailer; Thu, 16 May 2024 00:46:23 -0700
+Received: from antispam1.protagonist.nl ([2a0b:9cc0::250])
+by in12b.electric.net with esmtps (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+(Exim 4.96.1)
+(envelope-from Clark.Kent@Firmanavn.com)
+id 1s7Vol-0007hX-3s
+for alberto@Firmanavn.com;
+Thu, 16 May 2024 00:46:23 -0700
+Received: from s30.domeinwinkel.nl ([49.12.128.174])
+by antispam1.protagonist.nl with esmtps (TLSv1.3:TLS_AES_256_GCM_SHA384:256)
+(Exim 4.92)
+(envelope-from Clark.Kent@Firmanavn.com)
+id 1s7Vod-001tXy-QA
+for alberto@Firmanavn.com; Thu, 16 May 2024 09:46:17 +0200
+Received: from [45.94.211.234] (helo=[10.5.0.2])
+by s30.domeinwinkel.nl with esmtpsa (TLS1.3) tls TLS_AES_256_GCM_SHA384
+(Exim 4.96-58-g4e9ed49f8)
+(envelope-from Clark.Kent@Firmanavn.com)
+id 1s7Voc-008Y4B-32
+for alberto@Firmanavn.com;
+Thu, 16 May 2024 09:46:15 +0200
+From: Clark Kent Clark.Kent@Firmanavn.com
+To: Alberto alberto@Firmanavn.com
+Subject: Firmanavn - BMK770358
+Thread-Topic: Firmanavn - BMK770358
+Thread-Index: AQHap2UnM2UJOgpRh0u4PXqYtQRKQg==
+Date: Thu, 16 May 2024 07:46:03 +0000
+Message-ID: GENERATED-WASMISSING-1s7Voc-008Y4B-32@s30.domeinwinkel.nl
+Reply-To: "Clark Kent (Clark.Kent@Firmanavn.com)
+(Clark.Kent@Firmanavn.com)" ceo@group-mgnt.com
+Content-Language: fr
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource:
+DB5PEPF00014B93.eurprd02.prod.outlook.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+80e930ee-0521-4505-ca6f-08dc757c48ff
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+received-spf: softfail (in12b.electric.net: transitioning domain of
+Firmanavn.com does not designate 2a0b:9cc0::250 as permitted sender)
+client-ip=2a0b:9cc0::250; envelope-from=Clark.Kent@Firmanavn.com;
+helo=antispam1.protagonist.nl;
+x-ms-exchange-organization-originalclientipaddress: 89.104.206.11
+x-ms-exchange-organization-originalserveripaddress: 10.167.8.231
+x-ms-publictraffictype: Email
+authentication-results: spf=pass (sender IP is 89.104.206.11)
+smtp.mailfrom=Firmanavn.com; dkim=pass (signature was verified)
+header.d=s30.domeinwinkel.nl;dmarc=pass action=none
+header.from=Firmanavn.com;compauth=pass reason=100
+x-originating-ip: 49.12.128.174
+x-forefront-antispam-report:
+CIP:89.104.206.11;CTRY
+;LANG
+;SCL:-1;SRV:;IPV
+;SFV
+;H
+.electric.net;PTR
+.electric.net;CAT
+;SFS:(13230031);DIR
+;
+x-ms-office365-filtering-correlation-id: 80e930ee-0521-4505-ca6f-08dc757c48ff
+x-microsoft-antispam: BCL:0;ARA:13230031;
+x-ms-traffictypediagnostic:
+DB5PEPF00014B93:EE_|DU2P194MB1517:EE_|AS8P194MB1237:EE_
+x-ms-exchange-crosstenant-network-message-id:
+80e930ee-0521-4505-ca6f-08dc757c48ff
+x-ms-exchange-crosstenant-originalarrivaltime: 16 May 2024 07:46:24.0730 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Internet
+x-ms-exchange-crosstenant-id: aa81b43f-3969-4fd4-80c9-84c411508d82
+x-ms-exchange-transport-crosstenantheadersstamped: DU2P194MB1517
+x-ms-exchange-transport-endtoendlatency: 00:00:01.7399420
+x-ms-exchange-processed-by-bccfoldering: 15.20.7544.049
+dkim-signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+d=s30.domeinwinkel.nl; s=s30; h=Message-ID:Content-Type:MIME-Version:Date:
+Subject:To:From:Reply-To:sender:cc:bcc:in-reply-to:references:
+content-transfer-encoding; bh=hVWQmBR75jnqqpYoy75lQLgU+/s4mrUhSX7luHzbWLk=;
+b=sNmdjBHQkjwJKmfB8W8Qs4GeSnhQcU/0HGJB//iwWZFAdfDkIP/EHfkB12C2zVszw9p6K0/mtZ
+ywZAosCGkwo4S+DII5Pt1z1FGW3RTsGHSs89cREP7AN6O4okADzo4uL+hq87F8yJgt9vZcTxjB0g4
+S7DqOzIVvBqiCY6V74DNGOnx2FSamSVZgK9k5ietN3J5rJXSegJApU0FTl2X/n1XO3EAlGt3hsH4G
+qbant6bDSpDhZMuGE1m+FMIy4nXqN
+ 
+5HI7zXKsTNNAVE4+M99MasEZbYEIdeR326HoebX5AavzqQo0
+mFwVXM9iKIxjUssWBzRJc1LrdPKNyg5C5/hWA==;
+x-eopattributedmessage: 0
+x-eoptenantattributedmessage: aa81b43f-3969-4fd4-80c9-84c411508d82:0
+x-env-from: Clark.Kent@Firmanavn.com
+x-proto: esmtps
+x-revdns: antispam1.protagonist.nl
+x-helo: antispam1.protagonist.nl
+x-tls: TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256
+x-authenticated_id:
+x-policysmart: 7940132
+x-spam-status: NO, 0.0 / 5.0
+x-dkim: pass
+authentication-results-original: protagonist.nl; auth=pass
+smtp.auth=49.12.128.174@s30.domeinwinkel.nl
+x-ms-exchange-atpmessageproperties: SA|SL
+x-fm-os: (unknown)
+x-fm-geoip: NL
+x-origin-ip: 2a0b:9cc0::250
+x-ms-exchange-crosstenant-authas: Anonymous
+x-ms-exchange-crosstenant-authsource:
+DB5PEPF00014B93.eurprd02.prod.outlook.com
+x-dmarc: none
+x-report-abuse-to: spam@antispam1.protagonist.nl
+user-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+Thunderbird/68.8.1
+X-Microsoft-Antispam-Mailbox-Delivery:
+ucf:0;jmr:0;auth:0;dest
+;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+=?utf-8?B?N0hhZENPSlZYemREVHFZaVR1Mi9ocmNGMkx6YThVT2tzQXlrelIra1NaZ20w?=
+=?utf-8?B?OXViVVBIM2pPQkVTU1BYSjR1cUd3a2RTUzR4cnovYm9tVUJjbkJ1ZW83dWYz?=
+=?utf-8?B?VkZrb0I5TFp1dVh0bDM5bnNmQXY1Vk0yak1OcWp0bWlmUVE5Y2F4YVdDR0FI?=
+=?utf-8?B?NFpqeVBnQVRFTHNRbGNCYjYzYXFlemR1blhFeFFoREVGL1FDQmJIemtuaDVP?=
+=?utf-8?B?STRzWFlSQ3ZORE9BRjFBWWpSc210YXFZaDJuZ3ZDMzRKM01tYkllTStORGh3?=
+=?utf-8?B?ZlJ1UW1HaDBkS0FwZzdDZ0JLOUFXa3VWOW85bjFpUGpnZmxKUW1QanJ4cmpO?=
+=?utf-8?B?NEd6TXptMFpBR0VlcTFMTWlQTHhRbThibHIvaU1mVFRrUTFzL0RabnZqYjAy?=
+=?utf-8?B?aUxGMmdQakpPR1Z3T0U1OGFRaTBzd3c5THJPRzNzUWZZbFZXOEd0RTZRNm9v?=
+=?utf-8?B?T0U4WTdFc0l1aHcrMXd5bXhGM0pMSWk2azdCQkZQUys5NE8vSXhUaVhVZWxF?=
+=?utf-8?B?alpHaFFZYndoa3NndDF5TURDaDRaTm5OaHRPSURUVDBMNVA4ZzNSMXdLc3Zo?=
+=?utf-8?B?N0NHTXFITUhvaWhFdFhUbTk3aHF5L3d1VnZqYW9RcFkxRGVUVjc5RFZsNUJq?=
+=?utf-8?B?MnpiYnRFMlNHYTRic1htSjJ5dVpOUDhoL1RhMGhKOHg4YWJSdlBPYUpiM1VN?=
+=?utf-8?B?OC9TMURON2xydklxaVE5WnM4NXd2ZW5mSFJ3a0FjU1BMUkdHaitvbGxRRkph?=
+=?utf-8?B?WDg0OVUvcjZvL2FiM3dXdHFHVk1zL2E1UVlhRjNubkRWd3VsbEhNQU5DYjc3?=
+=?utf-8?B?NU56VWlrNDEwZy9DbE0rUmhZSCtta2svcUl4OWhOLzhFMklSU0ZHb1VLbERl?=
+=?utf-8?B?Y2luOWNaK2c0SUFONmE0dmIzQnpZNDdaaGRPb2o2MkJrVm1JODZDbGRmTlcx?=
+=?utf-8?B?NWM5SlMvWDFJYjJZOTBqdXhPRGYyYW96WGkrMlAvYUE0TFN5QnIrMUZRcm96?=
+=?utf-8?B?UG9EV0p2Wm0zZ2xLaktPbGRrbFBaWnhZY2tKRjZNa1lqZjJEVXhkbU54elgw?=
+=?utf-8?B?bktQZ3d6N3ZzMmFmZ0F4VUhmdVArdHgvYmkybjJ0NHF0NHFTWHpYWnNMay9G?=
+=?utf-8?B?RmFtMEhpUlJIWVVtaXBQc1NtWDdzdTQ1UjNteEhKTDJXb013QVRtWTdURHpE?=
+=?utf-8?B?N3M2Ukt6TDY0Zkl1VG5vWEkyMzBKYm94b2x6MjhzMjN0eUs4UWxkTDNicC9Q?=
+=?utf-8?B?YlZOemVoM3c3SkpUUzdaSmV0R2JsV1hwaHBBMnRITmVDd3hIT3RCUDRqMWo2?=
+=?utf-8?B?NUR3T2NjRzY3OHdxL3Z4WlVIMGo3aE1oTjNlSjhYa25GUmJjRERoeVdxTGNN?=
+=?utf-8?B?a0NuVzB1c2JGZlduNG1TbFlJTUhzQVR3QTlsdnJDNkRVKzk3aGRwaHlJRFQ3?=
+=?utf-8?B?dVU0WEpsZkR5cExqUlA4eUs0MURaOTFNU2FlVnVrQ1MySXQ3UVB4RXZKSjNs?=
+=?utf-8?B?YVovWmhISmdsaE8rWEQxblZlenBvTnpjaGk2TGFsQnhmWGV2VTZVd1FtblFw?=
+=?utf-8?B?VnA0MWtPODBka3Y1SktJUkJud096NUl1R3Z0eEFiY3VhNlFUaHF6SW5GWHow?=
+=?utf-8?B?N0dpbW9Pb29EYmUvODJoNzlEMFluQ0pub1NxQ0o3K0p5dlkzYXZlUWRweHRD?=
+=?utf-8?B?WTFKTWFpWDRBSENMcU42RW10Mk1YS1VSZktiVWYwaVRTWDY2RURTN2d3PT0=?=
+Content-Type: multipart/alternative;
+boundary="000_GENERATEDWASMISSING1s7Voc008Y4B32s30domeinwinkelnl"
+MIME-Version: 1.0
+
