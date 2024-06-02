@@ -1,0 +1,326 @@
+[BILAG]GoPhish kampagne: Modtager E-mail Header 
+Delivered-To: christopherhaugaard@gmail.com
+Received: by 2002:a59:9e85:0:b0:46b:1b74:89c7 with SMTP id v5csp251489vqn;
+        Tue, 28 May 2024 15:24:06 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFVD4Ov7lBCcZH/cm7YdQ7wtGy3N+csBQ2jULVhe0UwsS1lap2TKJc2iCClV+H3mm1f5ppB
+X-Received: by 2002:a05:6122:2512:b0:4da:aabe:6f6c with SMTP id 71dfb90a1353d-4e4f0272160mr13739181e0c.7.1716935045662;
+        Tue, 28 May 2024 15:24:05 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1716935045; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=aOBu3bpcV5/4HIIzb8v+eVZCPw921eiQgYYmysFS4d9bA5366DJsDtmbwbrijqHVm6
+         4IvIUQTLVxWwcN+MNlh32mmBz0e7kbLzpusY4l3nPNYsjybA4VDtipvkDPWk6nMQbaMV
+         p9p2Px9LXafs3hzQVUENWQX8k7Zf71ixAupl3WYDg0Je3W2R2C+T98L/MjD2HmMGWgfm
+         Dud6Z6Hz002nJzdPdE6ZfnwVwXHyflV7YxGJEhXBMWPZ+3A8J005KVAvJiTOSvjrQ5FS
+         XYEWpAKAuAcR40FGDe+M0i5r6ZF8oWpTmeY4N4qiWe2TGcl8TRht/KRHcNbASgjs0CF5
+         kz3g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:subject:message-id:from:date:dkim-signature;
+        bh=+kGQ+QuRRObLVThot0qLl4722m98SfQkfJUKgGRCmPo=;
+        fh=DGUqk78aYqJzU5oM2JPJNVA3ZJGQ/4yVnGUfdiuxKO8=;
+        b=qt8xFXUJo1BTnZ+nE6f4SGzOCmQVfieSbnXZhcvxojxN1WXUSKLSKBYc5UYIeDXUEc
+         HJUBai+bqD2sQbs+yqwPGZcjd5/8yhvsNbFgj/TVc7ZHx/9Ex+6jeEUa83NuPGkU1bnx
+         jvy7Kq89sFcVN3iOFklocxD4hT9JmFTGk2Ncqre0NAYT8Rdah+XbnwQLXrLigPfxkCl7
+         txtSlJljBfr3FcHkSCm0hfJzs/4MZi88IesXdgfkmUfFaXmYMdmfXOuX+xoycDgl8ucF
+         196DTlgtw1mp0uU9yib79DhcQiUlrEeQelnsjjne6rkc5c576LtvXqL7NayIyIwfJTjF
+         WoJQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b="kfD/1LXg";
+       arc=pass (i=1);
+       spf=pass (google.com: domain of greeznerd12345@outlook.com designates 2a01:111:f400:7e1a::81a as permitted sender) smtp.mailfrom=Greeznerd12345@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <Greeznerd12345@outlook.com>
+Received: from EUR05-DB8-obe.outbound.protection.outlook.com (mail-db8eur05olkn2081a.outbound.protection.outlook.com. [2a01:111:f400:7e1a::81a])
+        by mx.google.com with ESMTPS id af79cd13be357-794abcae559si1101369985a.12.2024.05.28.15.24.05
+        for <christopherhaugaard@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 28 May 2024 15:24:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of greeznerd12345@outlook.com designates 2a01:111:f400:7e1a::81a as permitted sender) client-ip=2a01:111:f400:7e1a::81a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b="kfD/1LXg";
+       arc=pass (i=1);
+       spf=pass (google.com: domain of greeznerd12345@outlook.com designates 2a01:111:f400:7e1a::81a as permitted sender) smtp.mailfrom=Greeznerd12345@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none; b=l78lofhJNvJxY2P0mcOQe9e4i44M7kT1NulKFiuKoMPrGGuLSX9YlaSGclTl8G3dVausjVqOxjffkdJf9K/vw/JCp98WP4QncxXEMCnYVNYMVrwQxbvrYAdYJ0lv4cfPJreqYpXbLdbia/HXJ03wiq0mdo7zhcPpugYPdDOsrq8i0jMjrR2mewq2te878rGJlXBKeDPjc3jcNyxZvlicuDpbW5k8cPcjrYGgIlfma142doGlqptGGtu/ET8LbuZJDtQ8bx55/hWIn8amJJmdAPb1xeAtI/krBqTj7fEdce3RLC8oB190yH3xbmarNvt7mv7m/tTghE1WKaH6hQxLkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=+kGQ+QuRRObLVThot0qLl4722m98SfQkfJUKgGRCmPo=; b=ZzqAcaI48FvnPQ0zeoyflPc+Xd1/j9Ax4NaaUTzxk8wED9LEDWSjQ+63jqokqpI0vaXGXKTlgkC1uiVfVcnHeqj28QmMCOFGAKQmk01DWmC44TFo80C9zQBHwiUtctSjmC28+1MBBv0zIm252PuDqjeIweCFbF1tdoE2GUdEpqTuKC88nOkXMJCkp3rlaMi5S9RWZzgWPZ7nd1rO/D2rbJCIiP7LI2W6rR2SxkaJd6Ci2TlVea7nHEWRX5OdtHvtGx9E7zMAYi7WttEUedmetW86LykgGCMPOSy6nlF3wijDtPxzxSYhJ3jJMZkvwFoqIv56HL8NTbQYofJMe/nzkQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none; dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=+kGQ+QuRRObLVThot0qLl4722m98SfQkfJUKgGRCmPo=; b=kfD/1LXg6miERlK01x9QQ2HRbw5p1e+Vx9JKMdFTaGS9BvaatmqM5nbjFjkQBoqPOkJHmG1J7AetZwDKGZcD/xhoorjsSHJTc+gdBq2kvjzMyWuTV8QsO6H+c9o6CFbKoT2h4H5kCWW1J/1iDameU4MvKwfAPXni4SNSkC1ekSNXVNTfCArROqiqavFyZcEsHmIjWJWroMig50HP4esXzPAx2m0oI02RIsQK+HMSJdqxJOeNye8oFaKu8cOaSz0F9W23S3dQhKlTBVLwn0u1lmb9nT2aJGYupU/3UdqJqix70+H6yNjHTGigasxvwzRcn84ZIAZy45c532UYWj1cfw==
+Received: from AM7PR02MB5910.eurprd02.prod.outlook.com (2603:10a6:20b:10d::20) by GV1PR02MB10988.eurprd02.prod.outlook.com (2603:10a6:150:203::18) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7611.19; Tue, 28 May 2024 22:24:03 +0000
+Received: from AM7PR02MB5910.eurprd02.prod.outlook.com ([fe80::3553:f331:8fc5:ea7d]) by AM7PR02MB5910.eurprd02.prod.outlook.com ([fe80::3553:f331:8fc5:ea7d%5]) with mapi id 15.20.7587.035; Tue, 28 May 2024 22:24:03 +0000
+Date: Tue, 28 May 2024 22:24:03 +0000
+From: Nyhedsbrev <Greeznerd12345@outlook.com>
+X-Mailer: gophish
+Message-ID: <AM7PR02MB591002432C2D5026AF56FA479FF12@AM7PR02MB5910.eurprd02.prod.outlook.com>
+Subject: SEMESTERSTART FEST!
+To: Greez Nerd <christopherhaugaard@gmail.com>
+Content-Type: multipart/alternative; boundary=cd8f49cbab842f5079d8d8a3f9c4a0d06a882b420c33bd16fff3d4dc8164
+X-TMN: [U9QHtCD9x+T4XqS5nyFI7Wsrlez8eDXrJ96COZMFbstXF+A9g7DCpQ==]
+X-ClientProxiedBy: OL1P279CA0040.NORP279.PROD.OUTLOOK.COM (2603:10a6:e10:14::9) To AM7PR02MB5910.eurprd02.prod.outlook.com (2603:10a6:20b:10d::20)
+Return-Path: Greeznerd12345@outlook.com
+X-Microsoft-Original-Message-ID: <1716935042917150827.25968.3271877083355681039@localhost>
+MIME-Version: 1.0
+X-MS-Exchange-MessageSentRepresentingType: 1
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: AM7PR02MB5910:EE_|GV1PR02MB10988:EE_
+X-MS-Office365-Filtering-Correlation-Id: d4e79c8c-6fea-46a6-6915-08dc7f64e123
+X-Microsoft-Antispam: BCL:0;ARA:14566002|1680799042|9400799015|9000799038|461199019|3412199016|3430499023|3420499023|440099019|1602099003;
+X-Microsoft-Antispam-Message-Info: mU27NXNidrf/0mFYbcqkL0IGmZask0zVhOWrlrKcHnYc1sIEd3SyWet1Jf11B+hJVYJJbAdIWfKClbeGhbQiW6wjJK+euYDmai1lNsOu2gFY1/rJYotUHyOJFhz2NBGrwxrMflaZNVckwuwmxH2iRYTCGKUhPIpV1hkN9QCwKR1kHk85zqaAzqPfx8py7ILydg6in5HaAhy44mg6EJhN6u7rET0D28inH6eVGy01oEaI/0vKwNTLOQAdszKICjb/tkCOzVCgErs6Y3SP4LvuiRBiSXj03L2S+gsQM+7mwtHoTuRgPlpiofMphm1RKsG3i/rtH77PlCT5zGvsubun+4NpBZWFQD3xD9ITVogLKiajgcz6AVjxxjU6DJhptmkB6INcfLEjPRzwrzoyp2w2Yj0RGfJrTZcQHEuXm65PHNbELHsH2+4ZhKDstKEqzFz1iOS1+mevJIgLswy1/+A15E1aE65v1pG8JIKoOhunkYQBZvhTnC6zoqtdSvnX7QYl0/DvD3StZMOyVKr6/VPPDFKnC9h5LpSAQzMIBCIrShCTbOXbFELCadz7840HDvJQt3oWm1o7gwsFw9jr+BA1MKxQ2nj42DotUxy6fp81lvhHg4QySXb7Jjwi0ChaF4n0ZN9iuszFzhpawud9vFQH1yrX87O5dGooGRnYfA3YllteICeVF9aRRCtjwBCq0ch1CAd7/bvnloUlt0aQ1Ed9J1evoBW9qoAxp0fCwCFEuLpBFKjRwPbco4i/HBeMT0htS/fQBTtYyqilIEF5nm0ugA==
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: z8IvN7QNi/Dg0Gv+ZhTb5zvlV1SF8Mx4bRje2xveZIhvZIUM/tcCx0nKMlNmMJYrh1FQ9KXz1F2GlpRhsw3uoYvJvmlF0kgf9bnDAIOx8UU3feKBbOWG7EyR4JuPcLd0QWCA0v8F2rnQzdmr1oSFy0K+fYY5yfzmFETAaIlw7bfd77RY/L1SA//GjmZEKImRUyhQ0QTE+Xr/k2TjNhXahm9Mlu3SuhUm2WfQsT+Aw0ExU1tqjjFkxTzAvJomroy5lWUZTlKWIID/yZpQaTjnQXWERBdDIHajm22YZ8aGKKsh69uEr43T6iBadwUBrG4pefJQUb97h6IPT0eyZHxCu7qn7nyiLjP4ogKO0Ehk7DDcZNtOWK1B5/EG4dVX8iTtwQVIUoPf0jd+3eBb7HTrpKR8hYKRpskFpJpQXJGXEl6yXgyEql5yuXq84ICBRR7BymNgcNpNUo2bgXfBSE48vD8a2XoLik5uiAIe/srQd/Smgh7P1VgzJJtTPb5UecRuJq6Ra3J2CuqNikZnYDMVlgTCowm7tySYLeuENWxJd04EycUI53rGKpFz/ayGKrCohISaTLJzTFsJwIYDopgEMVgtGhTXWyGoycObWlmFbJgCQbjMprW+L+C25ToApx2iVOnk8sJP8ZYiALJC1/jiza4FRSekr5YdBzUdeY1qM662pNCmuGdxHtfAMz3g5VOmpjd33SzKVMybwnjfZo6ogb6oZ3PkGOreTTAYiz6dRHVs4xlLC/yh6fePrjCWSZqIaJnhekEGSmZJ08MAMkqU3u/RJfTO43BRqHWXn7bXx4Dq8iCvMauBJXcxy3wh3JBUGgXrxwO36Ob9KnlZ6lYXJBnQM2E4I4OSgeepnGarZl71e0kft2X1Elz7jssSxqDaCLPBG5PLTsa5IV9BDX4CN81K6qKV+cUq9kN2zisH/fLeA3sycIdGQ8G5zjq8PWX6wMxS5AaXYwdUfrePbVeug9WgV1D30kbfvYjOVuct1eRwfXuLCxwdQzUJYbZJTcsQq1nfluqvxY3rkLgfixhvWVwVByN9jwDfk5QXptoCOGigU3O1860/xHGwJtR/elvCxfZecDv0kfCrbHF4suOoD6jkl0sQZCj/0YKjboMa3T4TRqxBBEDSdSm420cMyMmuceyszcCJxLxMejKhDvpV5jOaGbnzsm37lUeBijR1Ysm21az6w/vBGa50w66DuA5ROPfjcLSnwijmlNBoTDwFUUql74UXDa7PRv5kp7kr39eTk2KM5KF957tozB/qRaJHgNmkax/x2euGOrGOkgn7MlEwOJz34iEr/Chdi03perM=
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: d4e79c8c-6fea-46a6-6915-08dc7f64e123
+X-MS-Exchange-CrossTenant-AuthSource: AM7PR02MB5910.eurprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 May 2024 22:24:03.1357 (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV1PR02MB10988
+
+--cd8f49cbab842f5079d8d8a3f9c4a0d06a882b420c33bd16fff3d4dc8164
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+*Kun 3 dage tilbage til SEMESTERSTARTSFEST!*
+
+
+
+*Husk at der skal k=C3=B8bes billet for at kunne komme ind [image: =F0=9F=
+=91=87]Over 600
+studerende har allerede k=C3=B8bt deres!*
+
+
+
+*>> K=C3=B8b billet her <https://kea.safeticket.dk/Semesterstart> <<*
+
+
+
+*>> Se programmet for festen her <https://fb.me/e/2Tx5wQ33o> <<*
+
+
+
+Og s=C3=A5 lige en servicemeddelelse!
+
+FREDAGSBARERNE ER LUKKET P=C3=85 FREDAG [image: =F0=9F=8D=BB][image: =F0=9F=
+=9A=AB]
+
+
+
+Den nemlig blevet til en endnu federe l=C3=B8rdagsbar (semesterstartsfesten=
+)[image:
+=F0=9F=94=A5]
+
+Der vil derfor v=C3=A6re *studievenlige priser i barerne til
+semesterstartsfesten*, s=C3=A5 der ogs=C3=A5 er r=C3=A5d til pizza dagen ef=
+ter!
+
+
+
+Dette er den eneste gang p=C3=A5 =C3=A5ret, hvor vi samler alle KEA studere=
+nde fra
+n=C3=A6r og fjern til en hel dag fyldt med sjov, optr=C3=A6dener og god mad=
+!
+
+*Meld dig som frivillig til festen!*
+Vi vil elske at f=C3=A5 din hj=C3=A6lp til at lave semesterstartsfest! Vi e=
+r et hold
+p=C3=A5 omkring 30 frivillige studerende, som alle hj=C3=A6lper til med at =
+f=C3=A5 festen
+p=C3=A5 benene og sikre at alt k=C3=B8rer som det skal. Og s=C3=A5 har vi d=
+et ogs=C3=A5 rigtig
+sjovt imens.
+
+
+
+Hvis du har lyst til at hj=C3=A6lpe os, skal du bare udfylde tilmeldingsske=
+maet
+via linket og s=C3=A5 er du good to go! Vi pr=C3=B8ver s=C3=A5 vidt muligt =
+at im=C3=B8dekomme
+alles behov og laver vagtplaner efter dette. Frivillige beh=C3=B8ver ikke a=
+t
+k=C3=B8be billet til festen.
+
+
+
+*Tilmeld dig som frivillig her: https://forms.office.com/r/eKxsf0xjEn
+<https://forms.office.com/r/eKxsf0xjEn>*
+
+
+
+Vi gl=C3=A6der os, og det h=C3=A5ber vi ogs=C3=A5, at I g=C3=B8r.
+
+
+
+Ses vi? [image: =F0=9F=92=83]
+
+--cd8f49cbab842f5079d8d8a3f9c4a0d06a882b420c33bd16fff3d4dc8164
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+=09<title></title>
+</head>
+<body>
+<div dir=3D"ltr">
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:14pt;color:rgb(5,5,5)">Kun 3 =
+dage tilbage til SEMESTERSTARTSFEST!</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:11pt;color:black">&nbsp;</spa=
+n></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:11pt;color:rgb(5,5,5)">Husk a=
+t der skal k=C3=B8bes billet for at kunne komme ind <img alt=3D"=F0=9F=91=
+=87" height=3D"16" style=3D"height: 0.166in; width: 0.166in;" width=3D"16">=
+Over 600 studerende har allerede k=C3=B8bt deres!</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:11pt">&nbsp;</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:11pt;color:rgb(68,114,196)">&=
+gt;&gt; <a href=3D"http://172.232.129.20?rid=3DsDjTZTd" style=3D"color:rgb(=
+5,99,193)"><span style=3D"color:rgb(68,114,196)">K=C3=B8b billet her</span>=
+</a> &lt;&lt;</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(68,114,196)">&nbs=
+p;</span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><b><span style=3D"font-size:11pt;color:rgb(68,114,196)">&=
+gt;&gt; <a href=3D"http://172.232.129.20?rid=3DsDjTZTd" style=3D"color:rgb(=
+5,99,193)" target=3D"_blank"><span style=3D"color:rgb(68,114,196)">Se progr=
+ammet for festen her</span></a> &lt;&lt;</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:black">&nbsp;</span><=
+/p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:black">Og s=C3=A5 lig=
+e en servicemeddelelse!</span><span style=3D"font-size:11pt;color:rgb(5,5,5=
+)"> </span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">FREDAGSBA=
+RERNE ER LUKKET P=C3=85 FREDAG <img alt=3D"=F0=9F=8D=BB" border=3D"0" heigh=
+t=3D"16" style=3D"height: 0.166in; width: 0.166in;" width=3D"16"><img alt=
+=3D"=F0=9F=9A=AB" border=3D"0" height=3D"16" style=3D"height: 0.166in; widt=
+h: 0.166in;" width=3D"16">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">&nbsp;</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">Den nemli=
+g blevet til en endnu federe l=C3=B8rdagsbar (semesterstartsfesten)<img alt=
+=3D"=F0=9F=94=A5" border=3D"0" height=3D"16" style=3D"height: 0.166in; widt=
+h: 0.166in;" width=3D"16"> </span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">Der vil d=
+erfor v=C3=A6re <b>studievenlige priser i barerne til semesterstartsfesten<=
+/b>, s=C3=A5 der ogs=C3=A5 er r=C3=A5d til pizza dagen efter!</span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">&nbsp;</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">Dette er =
+den eneste gang p=C3=A5 =C3=A5ret, hvor vi samler alle KEA studerende fra n=
+=C3=A6r og fjern til en hel dag fyldt med sjov, optr=C3=A6dener og god mad!=
+ </span><br>
+<br>
+<strong><span style=3D"font-size:14pt;color:black">Meld dig som frivillig t=
+il festen!</span></strong><br>
+<span style=3D"font-size:11pt;color:black">Vi vil elske at f=C3=A5 din hj=
+=C3=A6lp til at lave semesterstartsfest! Vi er et hold p=C3=A5 omkring 30 f=
+rivillige studerende, som alle hj=C3=A6lper til med at f=C3=A5 festen p=C3=
+=A5 benene og sikre at alt k=C3=B8rer som det skal. Og s=C3=A5 har vi det o=
+gs=C3=A5 rigtig sjovt imens. </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><span style=3D"font-size:11pt;color:black">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><span style=3D"font-size:11pt;color:black">Hvis du har lyst =
+til at hj=C3=A6lpe os, skal du bare udfylde tilmeldingsskemaet via linket o=
+g s=C3=A5 er du good to go!</span><span style=3D"font-size:11pt"> <span sty=
+le=3D"color:black">Vi pr=C3=B8ver s=C3=A5 vidt muligt at im=C3=B8dekomme al=
+les behov og laver vagtplaner efter dette.</span> Frivillige beh=C3=B8ver i=
+kke at k=C3=B8be billet til festen.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><span style=3D"font-size:11pt">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><strong><span style=3D"font-size:11pt;color:black">Tilmeld d=
+ig som frivillig her:&nbsp;<a href=3D"http://172.232.129.20?rid=3DsDjTZTd" =
+style=3D"color:rgb(5,99,193)" title=3D"https://forms.office.com/r/eKxsf0xjE=
+n">https://forms.office.com/r/eKxsf0xjEn</a></span></strong></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><span style=3D"font-size:11pt">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">Vi gl=C3=
+=A6der os, og det h=C3=A5ber vi ogs=C3=A5, at I g=C3=B8r. </span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial;margin:0in;font-size:10pt;font-family:Ca=
+libri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">&nbsp;</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in;font-size:10pt;font-family:Calib=
+ri,sans-serif"><span style=3D"font-size:11pt;color:rgb(5,5,5)">Ses vi? <img=
+ alt=3D"=F0=9F=92=83" border=3D"0" height=3D"16" style=3D"height: 0.166in; =
+width: 0.166in;" width=3D"16"></span></p>
+</div>
+
+<p><img alt=3D"" src=3D"http://172.234.99.49/track?rid=3D9UOPxYd" style=3D"=
+display: none"></p>
+<img alt=3D"" style=3D"display: none" src=3D"http://172.232.129.20/track?ri=
+d=3DsDjTZTd"></body>
+</html>
+
+--cd8f49cbab842f5079d8d8a3f9c4a0d06a882b420c33bd16fff3d4dc8164--
+
